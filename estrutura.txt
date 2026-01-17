@@ -1,0 +1,13 @@
+meu_projeto/
+│
+├── main.py                 # Ponto de entrada (Bootstrapper)
+├── database/               # Onde ficará o arquivo .db (SQLite)
+├── app/
+│   ├── __init__.py
+│   ├── models/             # Lógica de Dados e SQL
+│   │   └── usuario_model.py
+│   ├── views/              # Interface Gráfica (Tkinter/ttk)
+│   │   └── main_view.py
+│   └── controllers/        # Lógica de Negócio e "Cola"
+│       └── main_controller.py
+└── assets/                 # Ícones, imagens e estilos (CSS-like)

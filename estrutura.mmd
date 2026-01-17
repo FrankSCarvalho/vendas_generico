@@ -1,0 +1,24 @@
+graph TD
+    subgraph "Nível de Entrada"
+        ROOT[main.py]
+    end
+
+    subgraph "App - Núcleo MVC"
+        C[Controllers] --> M[Models]
+        C --> V[Views]
+        V --> C
+    end
+
+    subgraph "Persistência e Recursos"
+        M --> DB[(SQLite Database)]
+        V --> ASSETS[Assets / Estilos]
+    end
+
+    ROOT --> C
+    ROOT --> V
+    ROOT --> M
+
+    style ROOT fill:#f9f,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style M fill:#dfd,stroke:#333,stroke-width:2px
+    style V fill:#ffd,stroke:#333,stroke-width:2px
