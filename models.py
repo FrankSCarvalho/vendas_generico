@@ -16,6 +16,6 @@ class Venda(BaseModel):
     quantidade = IntegerField()
     data_venda = DateTimeField(constraints=[SQL('DEFAULT CURRENT_TIMESTAMP')])
 
-
+# Inicializa o banco e as tabelas
 db.connect()
 db.create_tables([Produto, Venda])
